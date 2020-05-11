@@ -2,7 +2,7 @@
 
 module.exports = {
   url: 'https://aman-agrwl.github.io/',
-  pathPrefix: '/amanagrawal.github.io',
+  pathPrefix: '/aman',
   title: 'Refactor bee',
   subtitle: 'Software developer at LoginRadius',
   copyright: '© All rights reserved.',
