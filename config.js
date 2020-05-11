@@ -1,7 +1,7 @@
 'use strict';
 
 module.exports = {
-  url: 'https://lumen.netlify.com',
+  url: '',
   pathPrefix: '/',
   title: 'Refactor bee',
   subtitle: 'Software developer at LoginRadius',
