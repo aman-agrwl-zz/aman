@@ -27,7 +27,7 @@ workbox.core.clientsClaim();
  */
 self.__precacheManifest = [
   {
-    "url": "webpack-runtime-35624d133f847c725378.js"
+    "url": "webpack-runtime-1acffb13d79401026c41.js"
   },
   {
     "url": "styles.cd720fd7fdf31dbefd1a.css"
@@ -42,11 +42,11 @@ self.__precacheManifest = [
     "url": "532a2f07-5c94c7a8c333252841c3.js"
   },
   {
-    "url": "app-b84e959e0ce33a7d7794.js"
+    "url": "app-5fb908e2590f841ab37f.js"
   },
   {
     "url": "offline-plugin-app-shell-fallback/index.html",
-    "revision": "f3eac363d0e75b64610bb22322bb7e74"
+    "revision": "5017f2828305f298168c80296a148996"
   },
   {
     "url": "component---cache-caches-gatsby-plugin-offline-app-shell-js-cc2751a409622c7dca7b.js"
@@ -57,7 +57,7 @@ self.__precacheManifest = [
   },
   {
     "url": "page-data/app-data.json",
-    "revision": "7ef2d7dd24d68cdb3132f17133c5098b"
+    "revision": "c962adb09145c316097828313d380d9d"
   },
   {
     "url": "manifest.json",
@@ -65,7 +65,7 @@ self.__precacheManifest = [
   },
   {
     "url": "manifest.webmanifest",
-    "revision": "c13e2122f08ff90339e77cad5f81a7a8"
+    "revision": "98fe5863f6fdd402d16f28ec426fc309"
   }
 ].concat(self.__precacheManifest || []);
 workbox.precaching.precacheAndRoute(self.__precacheManifest, {});
@@ -153,12 +153,12 @@ const navigationRoute = new NavigationRoute(async ({ event }) => {
   lastNavigationRequest = event.request.url
 
   let { pathname } = new URL(event.request.url)
-  pathname = pathname.replace(new RegExp(`^/amanagrawal.github.io`), ``)
+  pathname = pathname.replace(new RegExp(`^/aman`), ``)
 
   // Check for resources + the app bundle
   // The latter may not exist if the SW is updating to a new version
   const resources = await idbKeyval.get(`resources:${pathname}`)
-  if (!resources || !(await caches.match(`/amanagrawal.github.io/app-b84e959e0ce33a7d7794.js`))) {
+  if (!resources || !(await caches.match(`/aman/app-5fb908e2590f841ab37f.js`))) {
     return await fetch(event.request)
   }
 
@@ -171,7 +171,7 @@ const navigationRoute = new NavigationRoute(async ({ event }) => {
     }
   }
 
-  const offlineShell = `/amanagrawal.github.io/offline-plugin-app-shell-fallback/index.html`
+  const offlineShell = `/aman/offline-plugin-app-shell-fallback/index.html`
   const offlineShellWithKey = workbox.precaching.getCacheKeyForURL(offlineShell)
   return await caches.match(offlineShellWithKey)
 })
